@@ -39,13 +39,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function users(){
+    public function Client(){
 
         return $this->hasOne(Client::class);
 
     }
-
-    
 
 
 

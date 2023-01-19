@@ -24,9 +24,9 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
 Route::middleware('auth:sanctum')->group(function(){
 
     Route::get('clients',[ClientController::class,'index']);
-    Route::get('clients',[ClientController::class,'show']);
-    Route::post('clients/{id}',[ClientController::class,'store']);
+    Route::post('clients',[ClientController::class,'store']);
     Route::patch('clients/{id}',[ClientController::class,'update']);
-    Route::delete('clients/{id}',[ClientController::class,'delete']);
+    Route::get('clients/{id}',[ClientController::class,'show']);
+    Route::delete('clients/{id}',[ClientController::class,'destroy']);
 
 });

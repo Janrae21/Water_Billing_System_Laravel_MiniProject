@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Client;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ClientController extends Controller
 {
@@ -30,7 +31,9 @@ class ClientController extends Controller
             'date' => $request->date,
             'name' => $request->name,
             'address' => $request->address,
-            'email' => $request->email
+            'email' => $request->email,
+            'user_id'=>Auth::user()->id,
+
         ]);
     }
 

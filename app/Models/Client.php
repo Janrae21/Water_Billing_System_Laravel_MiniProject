@@ -32,9 +32,4 @@ class Client extends Model
 
     }
 
-
-
-
-
-
 }
